@@ -1,4 +1,7 @@
 
+
+
+
 document.getElementById('changeColorBtn').addEventListener('click', function() {
     document.body.style.backgroundColor = getRandomColor();
 });
@@ -11,3 +14,4 @@ function getRandomColor() {
     }
     return color;
 }
+

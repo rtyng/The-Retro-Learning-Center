@@ -1,4 +1,4 @@
-import * as THREE from '..\\three.js';
+import * as THREE from '..\\node_modules';
 
 // Create scene, camera, and renderer using three.js
 // These will be used to create a rotating 3d cube

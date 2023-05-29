@@ -1,7 +1,27 @@
 Structure:
 
-Main page with links and retro design -> index.html
+HTML 
 
-Topics of data science tools and their applications -> courses.html
+    index.html -> Main page with links and retro design
 
-contact information with links to linkedin and github and more general information about me -> about.html
+    courses.html -> Topics of data science tools and their applications 
+
+    about.html -> Contact information with links to linkedin and github and more general information
+
+CSS
+
+    main.css -> primary styles common for the site
+
+    retrostyle.css -> specifc for retro themed styles
+
+JS
+
+    main.js -> common functions and scripts
+
+    interactive.js -> user interaction specifics 
+
+
+Assets
+
+    folder for miscellaneous resources
+

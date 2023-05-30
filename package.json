@@ -1,8 +1,31 @@
 {
   "dependencies": {
+    "express": "^4.18.2",
     "three": "^0.152.2"
   },
   "devDependencies": {
     "vite": "^4.3.9"
-  }
+  },
+  "name": "the-retro-learning-center",
+  "description": "A retro-themed website where you can learn about specific tools used in data science and their applications",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "test command"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtyng/The-Retro-Learning-Center.git"
+  },
+  "keywords": [
+    "Retro",
+    "Learning",
+    "Center"
+  ],
+  "author": "Randolph Tyng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rtyng/The-Retro-Learning-Center/issues"
+  },
+  "homepage": "https://github.com/rtyng/The-Retro-Learning-Center#readme"
 }

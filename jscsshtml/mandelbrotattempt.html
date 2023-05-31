@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mandelbrot Fractal</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="800" height="800"></canvas>
+
+    <script>
+      // Get the canvas element
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+
+      // Define the size and maximum iterations
+      const width = canvas.width;
+      const height = canvas.height;
+      const maxIterations = 100;
+
+      // Define the complex plane
+      const minX = -2.5;
+      const maxX = 1;
+      const minY = -1;
+      const maxY = 1;
+
+      // Iterate over each pixel and compute the Mandelbrot set
+      for (let x = 0; x < width; x++) {
+        for (let y = 0; y < height; y++) {
+          const a = map(x, 0, width, minX, maxX);
+          const b = map(y, 0, height, minY, maxY);
+
+          let ca = a;
+          let cb = b;
+          let n = 0;
+
+          while (n < maxIterations) {
+            const aa = a * a;
+            const bb = b * b;
+            const twoAB = 2 * a * b;
+
+            a = aa - bb + ca;
+            b = twoAB + cb;
+
+            if (aa + bb > 4) {
+              break; // Bail out if we're outside the Mandelbrot set
+            }
+
+            n++;
+          }
+
+          // Map the number of iterations to a color
+          const color = map(n, 0, maxIterations, 0, 255);
+          ctx.fillStyle = `rgb(${color}, ${color}, ${color})`;
+          ctx.fillRect(x, y, 1, 1);
+        }
+      }
+
+      // Helper function to map values from one range to another
+      function map(value, start1, stop1, start2, stop2) {
+        return ((value - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
+      }
+    </script>
+  </body>
+</html>

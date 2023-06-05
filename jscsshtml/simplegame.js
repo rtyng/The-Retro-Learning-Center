@@ -1,3 +1,5 @@
+// get canvas elements and set heights and widths
+
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
